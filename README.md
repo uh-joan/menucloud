@@ -1,9 +1,6 @@
 # MenuCloud
-=========
 
 MenuCloud is a platform to create menus and easily share them in the cloud. Any bussiness can now have the pricelist available to check on the web.
-
-=========
 
 It uses:
 
@@ -25,4 +22,8 @@ Flexible and minimalist web application framework for node.js.
 
 ## MongoDB + Mongoose
 
-An excellent document database. Combined with Mongoose to simplify adding validation and business logic.
+A document database. Combined with Mongoose to simplify adding validation and business logic.
+
+## Passport 
+
+Simple, unobtrusive authentication for Node.js.
