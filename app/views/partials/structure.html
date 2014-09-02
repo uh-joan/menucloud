@@ -1,0 +1,90 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="container">
+
+<!--p>{{ userId}}</p-->
+    <!--form role="form" ng-submit="addCategories(this)">
+        <div class="row">
+            <div class="input-group">
+                <input type="text" ng-model="category" placeholder="Add a new category" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Add">
+        </span>
+            </div>
+        </div>
+    </form>
+    <p></p-->
+    <!--div ui-sortable ng-model="categories">
+        <p class="input-group" ng-repeat="category in categories" style="padding:5px 10px; cursor: move;">
+            <input type="text" ng-model="category" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-danger" ng-click="removeCategory($index)" aria-label="Remove">X</button>
+            </span>
+        </p>
+    </div-->
+
+    <!-- Nested list template -->
+    <script type="text/ng-template" id="items_renderer.html">
+        <div ui-tree-handle>
+            <p class="input-group" style="padding:5px 10px; cursor: move;">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" data-nodrag ng-click="toggle(this)">
+                        <span class="glyphicon" ng-class="{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed}"></span>
+                    </button>
+                </span>
+                <input type="text" class="form-control" ng-model=item.title value={{item.title}} ng-model-onblur ng-change="update()" />
+                <span class="input-group-btn">
+                    <button class="pull-right btn btn-danger" data-nodrag ng-click="remove(this)">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </span>
+                <span class="input-group-btn">
+                    <button class="pull-right btn btn-primary" data-nodrag ng-click="newSubItem(this)">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </span>
+            </p>
+        </div>
+        <ol ui-tree-nodes="options" ng-model="item.items" ng-class="{hidden: collapsed}">
+            <li ng-repeat="item in item.items" ui-tree-node ng-include="'items_renderer.html'">
+            </li>
+        </ol>
+    </script>
+
+    <form class="form" name="form"  novalidate>
+        <div ui-tree>
+            <ol ui-tree-nodes ng-model="list" >
+                <!-- Save button -->
+                <div class="input-group">
+                    <h2>Structure of the menu</h2>
+                    <p>Create the categories of the menu, drag and drop for re-ordering</p>
+                    <p>Don't forget to save when you are done!</p>
+                    <span class="input-group-btn">
+                        <button class="pull-right btn" data-nodrag ng-click="saveList()">
+                            <span class="glyphicon glyphicon-save"></span>
+                        Save</button>
+                    </span>
+                </div>
+                <p></p>
+                <!-- Category input -->
+                <p class="input-group">
+                    <input type="text" class="form-control" ng-model="category" placeholder="Add a new category">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" data-nodrag ng-click="addCategory(this)">
+                                <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </span>
+                </p>
+
+                <!-- Load tree -->
+                <li ng-repeat="item in list" ui-tree-node ng-include="'items_renderer.html'"></li>
+            </ol>
+        </div>
+    </form>
+
+    <!-- Just for debug show the structure tree -->
+    <div>
+        <h3>Data binding</h3>
+        <pre class="code">{{ list | json }}</pre>
+    </div>
+</div>

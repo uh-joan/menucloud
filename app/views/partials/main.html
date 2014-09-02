@@ -1,0 +1,27 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="jumbotron">
+  <h1>We are Menu Cloud</h1>
+  <p class="lead">
+    <p><span ng-show="currentUser">Welcome back {{ currentUser.name }}!</span></p>
+    <img src="images/cloudMenu.png" alt="I'm CouldMenu"><br>
+    <p>Your menu place on the cloud</p>
+  </p>
+
+   It allows you to easily create your menu on the cloud and access it from anywhere
+
+    <!--p>{{currentUser.id}}</p-->
+
+  <!--p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p-->
+</div>
+
+<div class="row marketing">
+  <div ng-repeat="thing in awesomeThings">
+      <h4>{{thing.name}}</h4>
+      <p>{{thing.info}}</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>We ♥ leftRight</p>
+</div>
