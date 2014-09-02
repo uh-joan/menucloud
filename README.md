@@ -1,4 +1,4 @@
-# menucloud
+# MenuCloud
 =========
 
 MenuCloud is a platform to create menus and easily share them in the cloud. Any bussiness can now have the pricelist available to check on the web.
