@@ -4,6 +4,8 @@ MenuCloud is a platform to create menus and easily share them in the cloud. Any 
 
 <img src="https://github.com/uh-joan/menucloud/blob/master/app/images/menucloud.png">
 
+<img src="https://github.com/uh-joan/menucloud/blob/master/app/images/menucloudStructure.png">
+
 It uses:
 
 ## HTML5 Boilerplate
