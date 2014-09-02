@@ -2,7 +2,7 @@
 
 MenuCloud is a platform to create menus and easily share them in the cloud. Any bussiness can now have the pricelist available to check on the web.
 
-<p>hello</p>
+<img src="https://github.com/uh-joan/menucloud/blob/master/app/images/menucloud.png">
 
 It uses:
 
