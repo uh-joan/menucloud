@@ -9,6 +9,8 @@
 
 module.exports = function (grunt) {
 
+  //grunt.loadNpmTasks('grunt-heroku-deploy');
+
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
